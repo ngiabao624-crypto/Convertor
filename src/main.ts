@@ -36,7 +36,7 @@ const fahrenheitResult = document.getElementById("fahrenheit-result") as HTMLPar
 
 
 
-// This takes the input string ("12, 12") and the math function, and uses mapping to process the array.
+// I used this method to mapping all the input value being converted
 const convertWithMapping = (inputValue: string, conversionMath: (val: number) => number): string => {
     // Split the string into an array wherever there is a comma
     const stringArray = inputValue.split(",");
@@ -44,10 +44,10 @@ const convertWithMapping = (inputValue: string, conversionMath: (val: number) =>
     // Use .map() to convert every string item into a clean number
     const numberArray = stringArray.map(item => Number(item.trim()));
     
-    // Use .map() again to run your math equation on every number in the array
+    //  run your math equation on every number in the array
     const convertedArray = numberArray.map(conversionMath);
     
-    // Use .map() one last time to format to 2 decimal places, then join back into a string with commas
+    // format to 2 decimal places, then join back into a string with commas
     return convertedArray.map(result => result.toFixed(2)).join(", ");
 };
 
