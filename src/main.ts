@@ -52,39 +52,3 @@ const convertWithMapping = (inputValue: string, conversionMath: (val: number) =>
 };
 
 
-// 4. Calculate & Event Listeners
-if (kgButton) { 
-    kgButton.addEventListener("click", () => {
-        kgResult.textContent = convertWithMapping(kgInput.value, kilogramsToPounds);
-    });
-}
-
-if (lbButton) {
-    lbButton.addEventListener("click", () => {
-        lbResult.textContent = convertWithMapping(lbInput.value, poundsToKilograms);
-    });
-}
-
-if (milesButton) {
-    milesButton.addEventListener("click", () => {
-        milesResult.textContent = convertWithMapping(milesInput.value, milesToKilometres);
-    });
-}
-
-if (kilometresButton) {
-    kilometresButton.addEventListener("click", () => {
-        kilometresResult.textContent = convertWithMapping(kilometresInput.value, kilometresToMiles);
-    });
-}
-
-if (celsiusButton) {
-    celsiusButton.addEventListener("click", () => {
-        celsiusResult.textContent = convertWithMapping(celsiusInput.value, celsiusToFahrenheit);
-    });
-}
-
-if (fahrenheitButton) {
-    fahrenheitButton.addEventListener("click", () => {
-        fahrenheitResult.textContent = convertWithMapping(fahrenheitInput.value, fahrenheitToCelsius);
-    });
-}
